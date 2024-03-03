@@ -1,0 +1,213 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #929292;
+  overflow: hidden;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1500px;
+  height: 700px;
+  box-shadow: 0px 0px 50px #292828;
+}
+
+.india,
+.Australia,
+.Dubai,
+.Finland,
+.Ireland,
+.Iceland,
+.USA,
+.Canada,
+.Germany,
+.Thailand,
+.Netherland {
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.Finland {
+  background-image: url(https://source.unsplash.com/1600x900/?finland);
+}
+
+.india {
+  background: url(https://source.unsplash.com/1600x900/?India);
+}
+
+.Australia {
+  background-image: url(https://source.unsplash.com/1600x900/?australia);
+}
+
+.Iceland {
+  background-image: url(https://source.unsplash.com/1600x900/?Iceland);
+}
+
+.Netherland {
+  background-image: url(https://source.unsplash.com/1600x900/?netherland);
+}
+
+.Ireland {
+  background-image: url(https://source.unsplash.com/1600x900/?ireland);
+}
+
+.Germany {
+  background-image: url(https://source.unsplash.com/1600x900/?germany);
+}
+
+.USA {
+  background-image: url(https://source.unsplash.com/1600x900/?usa);
+}
+
+.Canada {
+  background-image: url(https://source.unsplash.com/1600x900/?canada);
+}
+
+.Dubai {
+  background-image: url(https://source.unsplash.com/1600x900/?dubai);
+}
+
+.Thailand {
+  background-image: url(https://source.unsplash.com/1600x900/?thailand);
+}
+
+.container .slide .item {
+  width: 200px;
+  height: 120px;
+  position: absolute;
+  top: 80%;
+  transform: translate(0, -50%);
+  border-radius: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  display: inline-block;
+  transition: 0.5s;
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2) {
+  top: 0;
+  left: 0;
+  transform: translate(0, 0);
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.slide .item:nth-child(3) {
+  left: 50%;
+}
+.slide .item:nth-child(4) {
+  left: calc(50% + 220px);
+}
+.slide .item:nth-child(5) {
+  left: calc(50% + 440px);
+}
+
+.slide .item:nth-child(n + 6) {
+  left: calc(50% + 660px);
+  opacity: 0;
+}
+
+.item .content {
+  position: absolute;
+  top: 50%;
+  left: 100px;
+  width: 300px;
+  text-align: left;
+  transform: translate(0, -50%);
+  font-family: system-ui;
+  display: none;
+}
+
+.slide .item:nth-child(2) .content {
+  display: block;
+}
+
+.content .name {
+  font-size: 60px;
+  text-transform: uppercase;
+  font-weight: bold;
+  opacity: 0;
+  letter-spacing: 4px;
+  color: #7d203f;
+  text-shadow: 1px 1px 5px #000;
+  animation: animate 1s ease-in-out 1 forwards;
+}
+
+.content .des {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  opacity: 0;
+  font-size: 25px;
+  font-weight: 600;
+  color: #368f8b;
+  letter-spacing: 2px;
+  animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content .btn {
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0;
+  animation: animate 1s ease-in-out 0.6s 1 forwards;
+  background: #759a44;
+  color: #000000;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  transition: all 0.5s ease;
+}
+
+.item .content .btn:hover {
+  background: #59792e;
+  color: #bfbfbf;
+}
+
+@keyframes animate {
+  from {
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(33px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate(0);
+    filter: blur(0);
+  }
+}
+
+.button {
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 20px;
+}
+
+.button button {
+  width: 40px;
+  height: 35px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+  border: 1px solid #000;
+  transition: 0.3s;
+}
+
+.button button:hover {
+  background: #ababab;
+  color: #fff;
+}
